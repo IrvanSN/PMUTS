@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import {FlatList, NativeBaseProvider} from "native-base";
-import {Separator} from "../../components";
-import ArticleList from "../../components/ArticleList";
+import {Separator, ArticleList} from "../../components";
+import {View} from "react-native";
 
 class NewsLists extends Component {
   state = {
@@ -23,12 +23,25 @@ class NewsLists extends Component {
   render() {
     return (
         <NativeBaseProvider>
-          <FlatList
-              style={{margin: 20}}
-              data={this.state.articles}
-              renderItem={({item}) => (<ArticleList title={item.title} imageURI={item.image} date={item.date} onPress={() => this.props.navigation.navigate('NewsDetail', {_title: "knint"})} />)}
-              ItemSeparatorComponent={() => <Separator height={20} />}
-          />
+          <View style={{backgroundColor: 'white'}}>
+            <FlatList
+                style={{margin: 20}}
+                data={this.state.articles}
+                renderItem={({item}) => (
+                    <ArticleList
+                        title={item.title}
+                        imageURI={item.image}
+                        date={item.date}
+                        onPress={
+                          () =>  this.props.navigation.navigate('NewsDetail', {article: item})
+                        }
+                    />
+                )}
+                ItemSeparatorComponent={
+                  () => <Separator height={20} />
+                }
+            />
+          </View>
         </NativeBaseProvider>
     );
   }

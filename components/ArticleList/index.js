@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {AspectRatio, Box, Heading, Stack} from "native-base";
 import {Image, Text} from "react-native";
-import {SmallButton} from "../index";
+import SmallButton from "../SmallButton";
 
 class ArticleList extends Component {
   render() {
