@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, TouchableOpacity, StyleSheet} from "react-native";
 
-class PrimaryButton extends Component {
+class SmallButton extends Component {
   render() {
     return (
         <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
@@ -11,7 +11,7 @@ class PrimaryButton extends Component {
   }
 }
 
-export default PrimaryButton;
+export default SmallButton;
 
 const styles = StyleSheet.create({
   button: {

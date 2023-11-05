@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from "react-native";
+import {View, Text, StyleSheet, Image} from "react-native";
 import {PrimaryButton} from "../../components";
 
 class Home extends Component {
