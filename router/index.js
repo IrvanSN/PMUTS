@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Home, NewsLists} from "../screens";
+import {Home, NewsDetail, NewsLists} from "../screens";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +16,12 @@ class Router extends Component {
           <Stack.Screen
               name="NewsLists"
               component={NewsLists}
-              options={{ headerShown: true, title: 'Berita Hari ini' }}
+              options={{ headerShown: true, title: 'Berita Terbaru' }}
+          />
+          <Stack.Screen
+              name="NewsDetail"
+              component={NewsDetail}
+              options={{ headerShown: true, title: 'Detail Berita' }}
           />
         </Stack.Navigator>
     );
