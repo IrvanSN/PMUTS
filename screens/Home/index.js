@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from "react-native";
+import {PrimaryButton} from "../../components";
 
 class Home extends Component {
   render() {
@@ -18,9 +19,7 @@ class Home extends Component {
             </View>
           </View>
           <View style={styles.buttonWrapper}>
-            <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('NewsLists')}>
-              <Text style={styles.buttonText}>Lihat Berita</Text>
-            </TouchableOpacity>
+            <PrimaryButton text="Lihat Berita Terbaru" onPress={() => this.props.navigation.navigate('NewsLists')} />
           </View>
         </View>
     );
@@ -67,16 +66,4 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center'
   },
-  button: {
-    backgroundColor: '#AA0000',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 50,
-    paddingVertical: 10
-  },
-  buttonText: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 20
-  }
 })
