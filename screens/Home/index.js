@@ -7,7 +7,7 @@ class Home extends Component {
     return (
         <View style={styles.wrapper}>
           <View style={styles.logo}>
-            <Image style={styles.logoImage} source={{uri: 'https://ypt.or.id/wp-content/uploads/2019/01/Logo-Primer-Utama-ITTelkom-Surabaya-White-300x300.png'}} />
+            <Image style={styles.logoImage} source={{uri: 'https://raw.githubusercontent.com/IrvanSN/PMUTS/main/assets/logo-if.png?token=GHSAT0AAAAAACHMQCKIHTKL4MVG4VV7H6LSZKWZPQQ'}} />
           </View>
           <View style={styles.biography}>
             <Image style={styles.biographyAvatar} source={{uri: 'https://avatars.githubusercontent.com/u/30742772?v=4'}} />
@@ -39,8 +39,9 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   logoImage: {
-    width: 200,
-    height: 200
+    width: 300,
+    height: 200,
+    resizeMode: 'contain'
   },
   biography: {
     borderBottomWidth: 1,
